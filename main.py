@@ -69,7 +69,15 @@ class CalendarHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRON.get_template('calendar.html')
         self.response.write(template.render(template_values))
 
+
+class MoctHandler(webapp2.RequestHandler):
+    def get(self):
+        template = JINJA_ENVIRON.get_template('moct.html')
+        self.response.write(template.render())
+
+
 app = webapp2.WSGIApplication([
                                   ('/', MainHandler),
-                                  ('/calendar', CalendarHandler)
+                                  ('/calendar', CalendarHandler),
+                                  ('/moct', MoctHandler)
                               ], debug=True)

@@ -71,6 +71,9 @@
 ########################################################################################################################
 -->
 
+<!-- Don't forget {% extends "base.html" %} -->
+
+<!-- This is the header of the webpage and is copied into the {% block header %} tag -->
 <div class="docs-header">
     <div class="container">
         <div class="row u-pull-center">
@@ -83,6 +86,9 @@
         </div>
     </div>
 </div>
+<!-- This ends the header content. Close it with {% endblock %} -->
+
+<!-- This is beginning of the content. It goes in the {% block content %} tag -->
 <div class="docs-section">
     <div class="container">
         <div class="row">
@@ -104,6 +110,7 @@
         </div>
     </div>
 </div>
+<!-- This is the end of the content. Close the content block with {% endblock %} -->
 
 <!--
 ########################################################################################################################
